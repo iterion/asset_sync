@@ -109,6 +109,7 @@ module AssetSync
         :body => File.open("#{path}/#{f}"),
         :public => true,
         :cache_control => "public, max-age=31557600",
+        'Access-Control-Allow-Origin' => '*',
         :expires => CGI.rfc1123_date(Time.now + 1.year)
       }
 
